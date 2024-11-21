@@ -6,9 +6,9 @@ $dbname = "ballongame";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-if ($conn->connect_error) {
-    echo("Erreur a la connexion: " . $conn->connect_error);
+if($conn->error){
+    echo "ça marche pas";
 } else {
-    echo "La connexion a été faite avec succès";
+    echo "ça marche";
 }
 ?>
