@@ -12,9 +12,7 @@ class DataBase
 	public static function getInstance() {
 		if(self::$instance === null) {
 			try {
-				
 				self::$instance = new PDO('mysql:host=127.0.0.1;dbname=ballongame','root','');
-				echo "Connexion à la base de données réussie !";
 			}
 
 			catch(PDOException $e) {

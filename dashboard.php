@@ -14,12 +14,12 @@ if ($result->num_rows > 0) {
 }*/
 
 require_once("vendor/autoload.php");
+header('Access-Control-Allow-Origin: *'); 
 
 use Gri\Baloongame\Controller\QuestionController;
 
 $controller = new QuestionController();
 
 echo $controller->showQuestions();
-
 
 ?>

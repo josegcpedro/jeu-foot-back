@@ -3,6 +3,7 @@
 namespace Gri\Baloongame\Repository;
 
 use Gri\Baloongame\Config\DataBase;
+use PDO;
 
 class QuestionRepository
 {
@@ -16,7 +17,7 @@ class QuestionRepository
         $result = $pdo->prepare($sql);
         $result->execute();
 
-        return $result->fetchAll(); 
+        return $result->fetchAll(PDO::FETCH_ASSOC); 
 
     }
 }
